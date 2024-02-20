@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+  
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/create"  >Create-user</a>
+      </div>
+      <div class="contener">
+        <h2 class="List-user">List User</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+  <% listuser.forEach(function(user) { %>
+    <tr>
+      <td> <%= user.Idd %> </td>
+      <td> <%= user.Name %> </td>
+      <td> <%= user.City %> </td>
+      <td> <%= user.Email %> </td>
+      <td>
+          <a href="/update/<%=user.Idd %> ">EDIT</a>
+          <button>Delete</button>
+      </td>
+    </tr>
+      <% }); %>
+</table>
+      </div>
+</body>
+</html>
